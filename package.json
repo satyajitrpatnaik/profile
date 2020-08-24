@@ -2,7 +2,7 @@
   "name": "satyajit-patnaik-profile-reactjs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://satyajitrpatnaik.github.io/satyajit-patnaik-reactjs-profile",
+  "homepage": "http://satyajitrpatnaik.github.io/profile",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
