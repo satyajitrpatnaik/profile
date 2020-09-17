@@ -1,23 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles.scss';
+
+import './styles.css';
 
 const NavBar = (props) => {
-
-  useEffect(() => {
-    const toggleButton = document.getElementsByClassName('toggle-button')[0];
-    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
-    toggleButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      navbarLinks.classList.toggle('active');
-    });
-  }, []);
 
   return (
     <nav className="navbar">
       <div className="brand-title">
         <img className="profile-img"
-          src={process.env.PUBLIC_URL + "/sp-logo.png"}/>
+          src={process.env.PUBLIC_URL + "/sp-logo.png"}
+          alt="Satyajit Patnaik | Frontend JavaScript Developer"/>
       </div>
       <a href="#" className="toggle-button">
         <span className="bar"></span>
