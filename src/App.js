@@ -3,8 +3,7 @@ import NavBar from './containers/navbar/NavBar';
 import Routes from './containers/routes/Routes';
 import Footer from './containers/footer/Footer';
 
-/* import 'bulma/css/bulma.css'; */
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

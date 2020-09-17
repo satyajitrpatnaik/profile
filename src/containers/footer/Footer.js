@@ -5,7 +5,7 @@ import './styles.css';
 function MyFooter() {
   return (
     <div className="footer">
-      <p>Satyajit Patnaik</p>
+      <p className="copyright">&#169; Satyajit Patnaik | Frontend JavaScript Developer</p>
     </div>
   )
 }
