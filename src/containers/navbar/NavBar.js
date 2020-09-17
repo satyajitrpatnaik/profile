@@ -1,23 +1,36 @@
 import React, { useEffect } from 'react';
+import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import './styles.scss';
+
+import './styles.css';
 
 const NavBar = (props) => {
 
+  let toggleButton;
+  let navbarLinks;
+
   useEffect(() => {
-    const toggleButton = document.getElementsByClassName('toggle-button')[0];
-    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+    toggleButton = document.getElementsByClassName('toggle-button')[0];
+    navbarLinks = document.getElementsByClassName('navbar-links')[0];
     toggleButton.addEventListener('click', (event) => {
       event.preventDefault();
       navbarLinks.classList.toggle('active');
     });
   }, []);
 
+  const toggleNavbar = (event) => {
+    navbarLinks.classList.toggle('active');
+  };
+
   return (
-    <nav className="navbar">
+    <nav className={classNames("navbar", "is-primary")}>
       <div className="brand-title">
-        <img className="profile-img"
-          src={process.env.PUBLIC_URL + "/sp-logo.png"}/>
+      <a href="/">
+        <img className="logo"
+            src={process.env.PUBLIC_URL + "/sp-logo.png"}
+            alt="Satyajit Patnaik | Frontend JavaScript Developer"/>
+      </a>
+        
       </div>
       <a href="#" className="toggle-button">
         <span className="bar"></span>
@@ -26,11 +39,12 @@ const NavBar = (props) => {
       </a>
       <div className="navbar-links">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/tech-stack">Tech</Link></li>
-          <li><Link to="/blogs">Blogs</Link></li>
-          <li><Link to="/interests">Interests</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/" onClick={toggleNavbar}>Home</Link></li>
+          <li><Link to="/tech-stack" onClick={toggleNavbar}>Tech</Link></li>
+          <li><Link to="/experience" onClick={toggleNavbar}>Experience</Link></li>
+          <li><Link to="/blogs" onClick={toggleNavbar}>Blogs</Link></li>
+          <li><Link to="/interests" onClick={toggleNavbar}>Interests</Link></li>
+          <li><Link to="/contact" onClick={toggleNavbar}>Contact</Link></li>
         </ul>
       </div>
     </nav>

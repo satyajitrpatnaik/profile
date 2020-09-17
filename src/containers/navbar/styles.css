@@ -1,14 +1,14 @@
-.navbar { 
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #424242;
   color: white;
 }
 
-.profile-img {
+.logo {
   margin-left: 50px;
   margin-top: 20px;
+  margin-bottom: 20px;
   height: 50px;
   border-radius: 25px;
 }
@@ -18,7 +18,7 @@
 }
 
 .navbar-links ul {
-  margin: 0;
+  margin: 1.5rem;
   padding: 0;
   display: flex;
 }
@@ -40,8 +40,8 @@
 
 .toggle-button {
   position: absolute;
-  top: .75rem;
-  right: 1rem;
+  top: 2rem;
+  right: 2.25rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -78,9 +78,15 @@
 
   .navbar-links li a {
     padding: .5rem 1rem;
+    text-align: center;
   }
 
   .navbar-links.active {
     display: flex;
+  }
+
+  .logo {
+    height: 30px;
+    width: 300px;
   }
 }
