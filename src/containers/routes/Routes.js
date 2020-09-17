@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { Blogs, Contact, Error, Experience, Home, Interests, TechStack } from './../../components/';
 
@@ -13,6 +13,7 @@ const Routes = () => {
       <Route path='/interests' component={Interests}/>
       <Route path='/contact' component={Contact}/>
       <Route component={Error} />
+      <Redirect from='/profile' to='/'/>
     </Switch>
   );
 };
