@@ -7,13 +7,13 @@ const Routes = () => {
   return (
     <Switch>
       <Route path='/' component={Home} exact/>
+      <Redirect from='/profile' to='/'/>
       <Route path='/tech-stack' component={TechStack}/>
       <Route path='/experience' component={Experience}/>
       <Route path='/blogs' component={Blogs}/>
       <Route path='/interests' component={Interests}/>
       <Route path='/contact' component={Contact}/>
       <Route component={Error} />
-      <Redirect from='/profile' to='/'/>
     </Switch>
   );
 };
