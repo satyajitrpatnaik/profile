@@ -25,7 +25,7 @@ const NavBar = (props) => {
   return (
     <nav className={classNames("navbar", "is-primary")}>
       <div className="brand-title">
-      <a href="/">
+      <a href="/profile">
         <img className="logo"
             src={process.env.PUBLIC_URL + "/sp-logo.png"}
             alt="Satyajit Patnaik | Frontend JavaScript Developer"/>
@@ -39,12 +39,12 @@ const NavBar = (props) => {
       </a>
       <div className="navbar-links">
         <ul>
-          <li><Link to="/" onClick={toggleNavbar}>Home</Link></li>
-          <li><Link to="/tech-stack" onClick={toggleNavbar}>Tech</Link></li>
-          <li><Link to="/experience" onClick={toggleNavbar}>Experience</Link></li>
-          <li><Link to="/blogs" onClick={toggleNavbar}>Blogs</Link></li>
-          <li><Link to="/interests" onClick={toggleNavbar}>Interests</Link></li>
-          <li><Link to="/contact" onClick={toggleNavbar}>Contact</Link></li>
+          <li><Link to="/profile" onClick={toggleNavbar}>Home</Link></li>
+          <li><Link to="/profile/tech-stack" onClick={toggleNavbar}>Tech</Link></li>
+          <li><Link to="/profile/experience" onClick={toggleNavbar}>Experience</Link></li>
+          <li><Link to="/profile/blogs" onClick={toggleNavbar}>Blogs</Link></li>
+          <li><Link to="/profile/interests" onClick={toggleNavbar}>Interests</Link></li>
+          <li><Link to="/profile/contact" onClick={toggleNavbar}>Contact</Link></li>
         </ul>
       </div>
     </nav>

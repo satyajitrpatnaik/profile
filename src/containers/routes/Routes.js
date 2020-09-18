@@ -6,13 +6,12 @@ import { Blogs, Contact, Error, Experience, Home, Interests, TechStack } from '.
 const Routes = () => {
   return (
     <Switch>
-      <Route path='/' component={Home} exact/>
-      <Redirect from='/profile' to='/'/>
-      <Route path='/tech-stack' component={TechStack}/>
-      <Route path='/experience' component={Experience}/>
-      <Route path='/blogs' component={Blogs}/>
-      <Route path='/interests' component={Interests}/>
-      <Route path='/contact' component={Contact}/>
+      <Route path='/profile/' component={Home} exact/>
+      <Route path='/profile/tech-stack' component={TechStack}/>
+      <Route path='/profile/experience' component={Experience}/>
+      <Route path='/profile/blogs' component={Blogs}/>
+      <Route path='/profile/interests' component={Interests}/>
+      <Route path='/profile/contact' component={Contact}/>
       <Route component={Error} />
     </Switch>
   );
